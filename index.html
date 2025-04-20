@@ -10,7 +10,6 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
       background-color: #ffffff;
     }
     header {
@@ -32,8 +31,17 @@
       text-align: left;
       max-width: 400px;
     }
+    .hero-text h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .hero-text p {
+      font-size: 18px;
+      color: #555;
+    }
     .hero-cta {
       margin-top: 30px;
+      text-align: center;
     }
     .cta-button {
       display: inline-block;
@@ -51,15 +59,34 @@
     .cta-button:hover {
       background-color: #38B2AC;
     }
+    section {
+      padding: 60px 20px;
+    }
+    #about {
+      background-color: #ffffff;
+    }
+    #features {
+      background-color: #f9f9f9;
+    }
+    #features h2 {
+      font-size: 28px;
+    }
     .features {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 40px;
-      padding: 50px 20px;
+      margin-top: 40px;
+    }
+    .feature-item {
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 20px;
+      border-radius: 16px;
+      width: 320px;
     }
     .feature-item img {
-      width: 300px;
+      width: 100%;
       border-radius: 12px;
       margin-bottom: 10px;
     }
@@ -69,6 +96,7 @@
       background-color: #f0f0f0;
       font-size: 14px;
       color: #666;
+      text-align: center;
     }
   </style>
 </head>
@@ -78,8 +106,8 @@
   <div class="hero">
     <img src="assets/dori_no_bg.png" alt="Dori the Owl">
     <div class="hero-text">
-      <h1>CheckupDori🏥🩺</h1>
-      <p>Making health checkups in Korea simple and easy.</p>
+      <h1>CheckupDori 🩺</h1>
+      <p>Your friendly health checkup guide in Korea.</p>
     </div>
   </div>
   <div class="hero-cta">
@@ -112,11 +140,13 @@
 
 <section id="cta">
   <h2>Ready to Start?</h2>
-  <a href="https://your-streamlit-app-link" class="cta-button" target="_blank">Use the App</a>
+  <div class="hero-cta">
+    <a href="https://your-streamlit-app-link" class="cta-button" target="_blank">Use the App</a>
+  </div>
 </section>
 
 <footer>
-  &copy; 2025 CheckupDori. All rights reserved.
+  Made by Team CheckupDori
 </footer>
 
 </body>
