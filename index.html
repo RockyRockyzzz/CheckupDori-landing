@@ -14,8 +14,6 @@
   <meta name="twitter:title" content="CheckupDori - Health Checkup Guide">
   <meta name="twitter:description" content="Simplify your health checkup journey in Korea with Dori!">
   <meta name="twitter:image" content="https://checkupdori.vercel.app/assets/dori-preview.png">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -102,6 +100,21 @@
       border-radius: 12px;
       margin-bottom: 10px;
     }
+    #comic {
+      padding: 60px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+    .comic-container {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .comic-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
     footer {
       margin-top: 40px;
       padding: 20px;
@@ -126,6 +139,13 @@
     <a href="https://your-streamlit-app-link" class="cta-button" target="_blank">Use the App</a>
   </div>
 </header>
+
+<section id="comic">
+  <h2>How CheckupDori Helps</h2>
+  <div class="comic-container">
+    <img src="assets/comic_combined_horizontal.png" alt="CheckupDori Comic" class="comic-image">
+  </div>
+</section>
 
 <section id="about">
   <h2>About CheckupDori</h2>
@@ -158,7 +178,7 @@
 </section>
 
 <footer>
-  Made by Team CheckupDori
+  Made with ❤️ by Team CheckupDori
 </footer>
 
 </body>
