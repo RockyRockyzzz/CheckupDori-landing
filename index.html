@@ -17,16 +17,27 @@
       background-color: #E0F7F5;
       padding: 60px 20px 40px;
     }
-    header img {
-      width: 120px;
-      margin-bottom: 20px;
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      padding: 50px 20px 0;
     }
-    section {
-      padding: 50px 20px;
+    .hero img {
+      width: 200px;
+    }
+    .hero-text {
+      text-align: left;
+      max-width: 400px;
+    }
+    .hero-cta {
+      margin-top: 30px;
     }
     .cta-button {
       display: inline-block;
-      margin-top: 30px;
+      margin-top: 20px;
       padding: 15px 30px;
       background-color: #4FD1C5;
       color: white;
@@ -45,6 +56,7 @@
       flex-direction: column;
       align-items: center;
       gap: 40px;
+      padding: 50px 20px;
     }
     .feature-item img {
       width: 300px;
@@ -63,10 +75,16 @@
 <body>
 
 <header>
-  <img src="assets/dori.png" alt="Dori the Owl">
-  <h1>CheckupDori</h1>
-  <p>Making health checkups in Korea simple and easy.</p>
-  <a href="https://your-streamlit-app-link" class="cta-button" target="_blank">Use the App</a>
+  <div class="hero">
+    <img src="assets/dori_no_bg.png" alt="Dori the Owl">
+    <div class="hero-text">
+      <h1>CheckupDori</h1>
+      <p>Making health checkups in Korea simple and easy.</p>
+    </div>
+  </div>
+  <div class="hero-cta">
+    <a href="https://your-streamlit-app-link" class="cta-button" target="_blank">Use the App</a>
+  </div>
 </header>
 
 <section id="about">
