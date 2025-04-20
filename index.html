@@ -116,6 +116,36 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.7);
+      margin: auto;
+      background-color: #fff;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 800px;
+      height: 80vh;
+      padding: 20px;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    .modal.show .modal-content {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
     footer {
       margin-top: 40px;
       padding: 20px;
@@ -177,23 +207,35 @@
     <a href="https://your-streamlit-app-link" class="cta-button" target="_blank">Use the App</a>
   </div>
 </section>
+
 <div id="guideModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeGuideModal()">&times;</span>
-      <iframe src="guide.html" frameborder="0" style="width:100%; height:80vh;"></iframe>
-    </div>
+  <div class="modal-content">
+    <span class="close" onclick="closeGuideModal()">&times;</span>
+    <iframe src="guide.html" frameborder="0" style="width:100%; height:80vh;"></iframe>
   </div>
+</div>
+
 <footer>
   Made with ❤️ by Team CheckupDori
 </footer>
+
 <script>
-    function openGuideModal() {
-      document.getElementById('guideModal').style.display = 'block';
-    }
-    
-    function closeGuideModal() {
-      document.getElementById('guideModal').style.display = 'none';
-    }
-</script>  
+function openGuideModal() {
+  const modal = document.getElementById('guideModal');
+  modal.style.display = 'block';
+  setTimeout(() => {
+    modal.classList.add('show');
+  }, 10);
+}
+
+function closeGuideModal() {
+  const modal = document.getElementById('guideModal');
+  modal.classList.remove('show');
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 300);
+}
+</script>
+
 </body>
 </html>
